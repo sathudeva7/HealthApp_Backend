@@ -22,5 +22,7 @@ namespace IMSApi.Models
 
         public List<Image> UploadedImages { get; set; } = new List<Image>();
         public List<Report> CreatedReports { get; set; } = new List<Report>();
+
+        public List<Appointment> Appointments { get; set; } = new List<Appointment>();
     }
 }

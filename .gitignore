@@ -1,0 +1,56 @@
+# .NET and ASP.NET specific ignores
+*.csproj.user
+*.suo
+*.user
+*.sln.docstates
+
+# Build output directories and files
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio specific
+.vs/
+.vscode/
+*.code-workspace
+
+# NuGet Packages
+*.nupkg
+packages/
+**/Packages/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Test results
+TestResults/
+*.trx
+*.xml
+
+# Dependency directories
+node_modules/
+wwwroot/lib/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# ASP.NET Core specific
+wwwroot/dist/
+wwwroot/build/
+appsettings.Development.json
+appsettings.Production.json
+
+# Rider IDE specific
+.idea/
+
+# Miscellaneous
+Thumbs.db
+*.DS_Store

@@ -68,6 +68,7 @@ builder.Services.AddScoped<IStaffRepository, StaffRepository>();
 builder.Services.AddScoped<IReportRepository, ReportRepository>();
 builder.Services.AddScoped<IImageRepository, ImageRepository>();
 builder.Services.AddScoped<IFinancialRepository, FinancialRepository>();
+builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 
 
 var app = builder.Build();

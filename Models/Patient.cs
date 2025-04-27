@@ -40,5 +40,7 @@ namespace IMSApi.Models
 
         public List<Image> Images { get; set; } = new List<Image>();
         public ICollection<Financial> FinancialRecords { get; set; } = new List<Financial>();
+
+        public List<Appointment> Appointments { get; set; } = new List<Appointment>();
     }
 }

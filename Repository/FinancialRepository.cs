@@ -14,6 +14,7 @@ namespace IMSApi.Repository
     {
         private readonly AppDBContext _context;
 
+
         public FinancialRepository(AppDBContext context)
         {
             _context = context;

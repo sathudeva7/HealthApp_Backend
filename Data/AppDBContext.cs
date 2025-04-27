@@ -23,6 +23,8 @@ namespace IMSApi.Data
 
         public DbSet<Financial> Financial { get; set; }
 
+        public DbSet<Appointment> Appointment { get; set; }
+
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

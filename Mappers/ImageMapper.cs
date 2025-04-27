@@ -30,7 +30,6 @@ namespace IMSApi.Mappers
                 PatientId = patientId,
                 UploadedBy = createImageDto.UploadedBy,
                 FilePath = createImageDto.FilePath,
-               
             };
         }
 
