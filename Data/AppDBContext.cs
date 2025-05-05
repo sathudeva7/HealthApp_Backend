@@ -25,6 +25,8 @@ namespace IMSApi.Data
 
         public DbSet<Appointment> Appointment { get; set; }
 
+        public DbSet<AppointmentSlot> AppointmentSlots { get; set; }
+
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

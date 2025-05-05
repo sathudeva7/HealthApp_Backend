@@ -15,7 +15,6 @@ obj/
 
 # Visual Studio specific
 .vs/
-.vscode/
 *.code-workspace
 
 # NuGet Packages
@@ -38,8 +37,6 @@ node_modules/
 wwwroot/lib/
 
 # Environment files
-.env
-.env.local
 .env.*.local
 
 # ASP.NET Core specific
@@ -54,3 +51,4 @@ appsettings.Production.json
 # Miscellaneous
 Thumbs.db
 *.DS_Store
+config.bat
