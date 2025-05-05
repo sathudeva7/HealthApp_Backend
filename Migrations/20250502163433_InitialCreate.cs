@@ -106,6 +106,30 @@ namespace IMSApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "AppointmentSlots",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    DoctorId = table.Column<int>(type: "integer", nullable: false),
+                    StartTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    EndTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    IsAvailable = table.Column<bool>(type: "boolean", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AppointmentSlots", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AppointmentSlots_Staff_DoctorId",
+                        column: x => x.DoctorId,
+                        principalTable: "Staff",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Image",
                 columns: table => new
                 {
@@ -196,6 +220,11 @@ namespace IMSApi.Migrations
                 column: "PatientId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_AppointmentSlots_DoctorId",
+                table: "AppointmentSlots",
+                column: "DoctorId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Financial_PatientId",
                 table: "Financial",
                 column: "PatientId");
@@ -246,6 +275,9 @@ namespace IMSApi.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Appointment");
+
+            migrationBuilder.DropTable(
+                name: "AppointmentSlots");
 
             migrationBuilder.DropTable(
                 name: "Financial");
